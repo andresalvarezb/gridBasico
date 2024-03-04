@@ -4,9 +4,11 @@
     --mobile: 400px;
     --desktop: 1500px;
 
-    --color-primary: #000;
+    --color-primary: #ececec;
+    --color-secondary: #fff;
 
     --radius: 6px;
+    --shadown: box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 
@@ -14,4 +16,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primary);
+}
+
+.container {
+    width: 800px;
+    height: 520px;
+    margin: 1rem auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadown);
+    background-color: var(--color-secondary);
+
+    display: grid;
+    grid-template: 1fr /1fr 2fr 5fr;
 }
