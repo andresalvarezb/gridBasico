@@ -1,0 +1,17 @@
+@import url("normalize.css");
+
+:root{
+    --mobile: 400px;
+    --desktop: 1500px;
+
+    --color-primary: #000;
+
+    --radius: 6px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
