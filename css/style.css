@@ -1,14 +1,23 @@
 @import url("normalize.css");
 
-:root{
+:root {
     --mobile: 400px;
     --desktop: 1500px;
 
-    --color-primary: #ececec;
-    --color-secondary: #fff;
+    --color-primary: #87d8f9;
+    --color-secondary: #d7f065;
+    --color-tertiary: #aef7ae;
+    --color-optional: #fffe91;
+    --color-bg-body: #ececec;
+    --color-bg-card: #fff;
+    --color-titles: #000;
+    --color-subtitles: #8a8a8a;
+    --color-text: #000;
+
+    --color-bg-user: linear-gradient(94deg, rgba(135,216,249,1) 0%, rgba(174,247,174,1) 39%, rgba(255,254,145,1) 73%);
 
     --radius: 6px;
-    --shadown: box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
 
@@ -18,18 +27,138 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: var(--color-primary);
+    background-color: var(--color-bg-body);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ATOMS / HELPERS */
+
+h1,
+h2 {
+    font-weight: 700;
+    color: var(--color-titles);
+}
+
+h3,
+h4 {
+    font-weight: 600;
+    color: var(--color-titles);
+}
+
+img {
+    width: 100px;
+    height: 20px;
 }
 
 .container {
-    width: 800px;
-    height: 520px;
-    margin: 1rem auto;
     border-radius: var(--radius);
-    box-shadow: var(--shadown);
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg-card);
+}
 
+.main {
+    max-width: var(--desktop);
+    margin: 0 auto;
     display: grid;
-    grid-template: 1fr /1fr 2fr 5fr;
+    grid-template: repeat(9, 1fr) / repeat(10, 1fr);
+    grid-template-areas:
+        "nav nav nav nav nav nav nav nav nav nav"
+        "discussion discussion discussion discussion sales sales sales sales earn earn"
+        "discussion discussion discussion discussion sales sales sales sales earn earn"
+        "revenue revenue revenue revenue sales sales sales sales earn earn"
+        "revenue revenue revenue revenue sales sales sales sales devs devs"
+        "revenue revenue revenue revenue sales sales sales sales devs devs"
+        "product product product product product calendar calendar calendar calendar calendar"
+        "product product product product product calendar calendar calendar calendar calendar"
+        "product product product product product calendar calendar calendar calendar calendar";
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__options{
+    flex:  1;
+}
+
+.nav__options,
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav__item {
+    color: var(--color-text);
+    text-transform: capitalize;
+}
+.nav__item:hover {
+    color: var(--color-subtitles);
+}
+
+.nav__options label {
+    position: relative;
+}
+
+.nav__options input {
+    position: relative;
+    border: thin solid var(--color-bg-body);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+}
+
+.nav__options span {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    background: var(--color-bg-user);
+}
+
+
+
+.discussion {
+    grid-area: discussion;
+}
+
+.revenue {
+    grid-area: revenue;
+}
+
+.sales {
+    grid-area: sales;
+}
+
+.earn {
+    grid-area: earn;
+}
+
+.devs {
+    grid-area: devs;
+}
+
+.product {
+    grid-area: product;
+}
+
+.calendar {
+    grid-area: calendar;
 }
