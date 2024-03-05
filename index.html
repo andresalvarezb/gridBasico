@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <nav class="nav">
+            <div class="nav__options">
+                <ul class="nav__list">
+                    <li class="nav__item">overview</li>
+                    <li class="nav__item">reports</li>
+                </ul>
+                <label for="search">
+                    <input type="search" name="search" id="search" placeholder="Search">
+                    <span class="material-symbols-outlined">search</span>
+                </label>
+            </div>
+            <div class="nav__user">
+                <div class="nav__icons">
+                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined">notifications</span>
+                </div>
+                <div class="nav__user-info">
+                    <div class="user__content">
+                        <h2>thomas gepsan</h2>
+                        <p>super admin</p>
+                    </div>
+                    <div class="nav__user-img img">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="discussion">
+            <p class="discussion__date">12:30 - 15-45 <span>...</span></p>
+            <h2 class="discussion__title">new project discussion</h2>
+            <div class="discussion__users">
+                <div class="discussion__img img"><img src="" alt=""></div>
+                <div class="discussion__img img"><img src="" alt=""></div>
+                <div class="discussion__img img">vc</div>
+                <div class="discussion__img img">+3</div>
+            </div>
+        </section>
+        <section class="revenue">
+            <div class="revenue__header">
+                <div class="revenue__title">revenue this week</div>
+                <div class="revenue__icons">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                </div>
+            </div>
+            <h2 class="revenue__num">$84,670</h2>
+            <div class="revenue__img">
+                <img src="src/imgs/default-img.jpg" alt="">
+            </div>
+        </section>
+        <section class="sales">
+            <h2 class="sales__title"></h2>
+            <div class="sales__date">
+                <p>yearly<span>2023</span><span class="material-symbols-outlined">unfold_more</span></p>
+            </div>
+            <h3 class="sales__num">$38.96 usd</h3>
+            <p>+2.75 <span class="material-symbols-outlined">arrow_drop_up</span></p>
+            <div class="sales__img">
+                <img src="src/imgs/default-img.jpg" alt="">
+            </div>
+        </section>
+        <section class="earn">
+            <div class="earn__today">
+                <h3>today's earning</h3>
+                <p>$2890</p>
+            </div>
+            <div class="earn__bookings">
+                <h3>today's booking</h3>
+                <p>24</p>
+            </div>
+            <div class="earn__balance">
+                <h3>total balance</h3>
+                <p>$2M</p>
+            </div>
+        </section>
+        <section class="devs">
+            <p class="devs__date">12:30 - 15-45</p>
+            <h2 class="devs__title">devs meting</h2>
+            <button>15 mins left</button>
+            <div class="devs__users">
+                <div class="devs__img img"><img src="" alt=""></div>
+                <div class="devs__img img">+3</div>
+                <div class="devs__img img">
+                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                </div>
+            </div>
+        </section>
+        <section class="product">
+            <div class="product__header">
+                <h2 class="product__title">product design</h2>
+                <span class="material-symbols-outlined">toggle_on</span>
+            </div>
+            <p class="devs__date">12:30 - 15-45</p>
+            <button>Coder</button>
+            <button>Meeting</button>
+            <div class="discussion__users">
+                <div class="discussion__img img"><img src="" alt=""></div>
+                <div class="discussion__img img"><img src="" alt=""></div>
+                <div class="discussion__img img">vc</div>
+                <div class="discussion__img img">+3</div>
+            </div>
+        </section>
+        <section class="calendar"><img src="src/imgs/default-img.jpg" alt=""></section>
+    </div>
 </body>
+
 </html>
