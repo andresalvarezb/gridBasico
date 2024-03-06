@@ -11,8 +11,8 @@
     --color-bg-body: #ececec;
     --color-bg-card: #fff;
     --color-titles: #000;
-    --color-subtitles: #8a8a8a;
-    --color-text: #000;
+    --color-text: #8a8a8a;
+    --color-subtitles: #000;
 
     --color-bg-user: linear-gradient(94deg, rgba(135,216,249,1) 0%, rgba(174,247,174,1) 39%, rgba(255,254,145,1) 73%);
 
@@ -53,14 +53,62 @@ h4 {
     color: var(--color-titles);
 }
 
-img {
-    width: 100px;
-    height: 20px;
+/* ATOMS / HELPERS */
+
+h1, h2, h3, h4{
+    text-transform: capitalize;
+    font-weight: 700;
 }
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p,
+.nav__item,
+#search {
+    color: var(--color-text);
+    text-transform: capitalize;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container__img--icon {
+    --radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius);
+}
+
+.container__img--icon img {
+    --radius: 50%;
+    border-radius: var(--radius);
+}
+
+
 
 .container {
     border-radius: var(--radius);
     background-color: var(--color-bg-card);
+    box-shadow: var(--shadow);
 }
 
 .main {
@@ -68,6 +116,7 @@ img {
     margin: 0 auto;
     display: grid;
     grid-template: repeat(9, 1fr) / repeat(10, 1fr);
+    gap: 1rem;
     grid-template-areas:
         "nav nav nav nav nav nav nav nav nav nav"
         "discussion discussion discussion discussion sales sales sales sales earn earn"
@@ -85,10 +134,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
-
+/* 
 .nav__options{
     flex:  1;
+    padding-block: 1rem;
 }
 
 .nav__options,
@@ -99,10 +150,6 @@ img {
     gap: 1rem;
 }
 
-.nav__item {
-    color: var(--color-text);
-    text-transform: capitalize;
-}
 .nav__item:hover {
     color: var(--color-subtitles);
 }
@@ -127,16 +174,41 @@ img {
 
 .nav__user {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex: 1;
     background: var(--color-bg-user);
+    padding-block: 1rem;
 }
 
+.nav__user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: right;
+}
 
+.img {
+    --radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius);
+}
+
+.img > img {
+    --radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius);
+} */
 
 .discussion {
     grid-area: discussion;
+    background-color: var(--color-primary);
 }
 
 .revenue {
