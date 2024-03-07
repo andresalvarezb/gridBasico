@@ -217,10 +217,15 @@ img {
     font-weight: 600;
 }
 
-.discussion__users {
+.discussion__users{
+    margin-top: 1rem;
+}
+.discussion__users,
+.discussion__users > div {
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: space-between;
 }
 
 .discussion__users .container__img--icon {
@@ -231,10 +236,6 @@ img {
     background-color: var(--color-secondary);
 }
 
-.discussion__users .container__img--icon:not(:first-child) {
-    position: relative;
-    left: -10px;
-}
 .discussion__users .container__img--word{
     background-color: var(--color-subtitles);
     color: var(--color-bg-body);
@@ -245,8 +246,7 @@ img {
 }
 
 .discussion__users .container__img--word:last-child {
-    /* position: absolute; */
-    right: 0;
+    background-color: var(--color-subtitles);
 }
 
 
