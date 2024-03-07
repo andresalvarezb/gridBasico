@@ -41,6 +41,17 @@ ul {
 
 /* ATOMS / HELPERS */
 
+a {
+    --radius: 0.25rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-titles);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius);
+}
+
 h1,
 h2 {
     font-weight: 700;
@@ -318,10 +329,36 @@ img {
     background-color: var(--color-tertiary);
     border-radius: var(--radius);
 }
+
 .devs {
     grid-area: devs;
+    background-color: var(--color-secondary);
 }
 
+.devs__users{
+    margin-top: 1rem;
+}
+
+.devs__users,
+.devs__users div,
+.devs__users .container__img--word {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.devs__users .container__img--word {
+    justify-content: center;
+    background-color: var(--color-subtitles);
+    color: var(--color-bg-card);
+}
+
+.devs__users .arrow{
+    justify-content: center;
+    transform: rotate(-45deg);
+    background-color: transparent;
+}
 .product {
     grid-area: product;
 }
