@@ -16,7 +16,7 @@
 
     --color-bg-user: linear-gradient(94deg, rgba(135,216,249,1) 0%, rgba(174,247,174,1) 39%, rgba(255,254,145,1) 73%);
 
-    --radius: 6px;
+    --radius: 20px;
     --shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 }
@@ -109,13 +109,14 @@ img {
     border-radius: var(--radius);
     background-color: var(--color-bg-card);
     box-shadow: var(--shadow);
+    padding: 1rem;
 }
 
 .main {
     max-width: var(--desktop);
     margin: 0 auto;
     display: grid;
-    grid-template: repeat(9, 1fr) / repeat(10, 1fr);
+    grid-template: repeat(9, auto-fit) / repeat(10, 1fr);
     gap: 1rem;
     grid-template-areas:
         "nav nav nav nav nav nav nav nav nav nav"
@@ -136,8 +137,9 @@ img {
     align-items: center;
     gap: 1rem;
 }
-/* 
-.nav__options{
+
+.nav__options,
+.nav__user{
     flex:  1;
     padding-block: 1rem;
 }
@@ -154,15 +156,15 @@ img {
     color: var(--color-subtitles);
 }
 
-.nav__options label {
+.nav__options .search {
     position: relative;
 }
 
 .nav__options input {
-    position: relative;
     border: thin solid var(--color-bg-body);
     padding: 0.5rem;
     border-radius: var(--radius);
+    background-color: #8a8a8a15;
 }
 
 .nav__options span {
@@ -174,11 +176,20 @@ img {
 
 .nav__user {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex: 1;
     background: var(--color-bg-user);
-    padding-block: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+
+}
+
+.nav__icons span{
+    font-size: 2rem;
+}
+
+.nav__icons span:first-child{
+    margin-right: 2rem;
 }
 
 .nav__user-info {
@@ -189,27 +200,55 @@ img {
     text-align: right;
 }
 
-.img {
-    --radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-primary);
-    border-radius: var(--radius);
-}
-
-.img > img {
-    --radius: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: var(--radius);
-} */
-
 .discussion {
     grid-area: discussion;
     background-color: var(--color-primary);
 }
+
+.discussion__date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-subtitles);
+}
+
+.discussion__date span {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.discussion__users {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.discussion__users .container__img--icon {
+    background-color: var(--color-optional);
+}
+
+.discussion__users .container__img--icon:nth-child(2) {
+    background-color: var(--color-secondary);
+}
+
+.discussion__users .container__img--icon:not(:first-child) {
+    position: relative;
+    left: -10px;
+}
+.discussion__users .container__img--word{
+    background-color: var(--color-subtitles);
+    color: var(--color-bg-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.discussion__users .container__img--word:last-child {
+    /* position: absolute; */
+    right: 0;
+}
+
 
 .revenue {
     grid-area: revenue;
