@@ -14,7 +14,7 @@
     --color-text: #8a8a8a;
     --color-subtitles: #000;
 
-    --color-bg-user: linear-gradient(94deg, rgba(135,216,249,1) 0%, rgba(174,247,174,1) 39%, rgba(255,254,145,1) 73%);
+    --color-bg-user: linear-gradient(94deg, rgba(135, 216, 249, 1) 0%, rgba(174, 247, 174, 1) 39%, rgba(255, 254, 145, 1) 73%);
 
     --radius: 20px;
     --shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -55,9 +55,13 @@ h4 {
 
 /* ATOMS / HELPERS */
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     text-transform: capitalize;
     font-weight: 700;
+    margin-block: 1rem;
 }
 
 h1 {
@@ -88,6 +92,10 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.container__img {
+    height: 240px;
 }
 
 .container__img--icon {
@@ -139,8 +147,8 @@ img {
 }
 
 .nav__options,
-.nav__user{
-    flex:  1;
+.nav__user {
+    flex: 1;
     padding-block: 1rem;
 }
 
@@ -184,11 +192,11 @@ img {
 
 }
 
-.nav__icons span{
+.nav__icons span {
     font-size: 2rem;
 }
 
-.nav__icons span:first-child{
+.nav__icons span:first-child {
     margin-right: 2rem;
 }
 
@@ -217,11 +225,12 @@ img {
     font-weight: 600;
 }
 
-.discussion__users{
+.discussion__users {
     margin-top: 1rem;
 }
+
 .discussion__users,
-.discussion__users > div {
+.discussion__users>div {
     display: flex;
     align-items: center;
     position: relative;
@@ -236,7 +245,7 @@ img {
     background-color: var(--color-secondary);
 }
 
-.discussion__users .container__img--word{
+.discussion__users .container__img--word {
     background-color: var(--color-subtitles);
     color: var(--color-bg-body);
     display: flex;
@@ -254,8 +263,43 @@ img {
     grid-area: revenue;
 }
 
+.revenue__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.revenue__icons span {
+    background-color: var(--color-primary);
+    border-radius: var(--radius);
+    padding: 0.25rem;
+}
+
+.revenue__icons span:first-child {
+    background-color: var(--color-secondary);
+}
+
+.revenue__icons span:last-child {
+    transform: rotate(-45deg);
+}
+
 .sales {
     grid-area: sales;
+}
+
+.sales__date p,
+.sales__date p span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sales h1 + h3{
+    color: var(--color-secondary);
+}
+
+.sales .container__img {
+    height: 340px;
 }
 
 .earn {
