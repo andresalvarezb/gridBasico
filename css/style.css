@@ -2,7 +2,7 @@
 
 :root {
     --mobile: 400px;
-    --desktop: 1500px;
+    --desktop: 1000px;
 
     --color-primary: #87d8f9;
     --color-secondary: #d7f065;
@@ -155,8 +155,12 @@ img {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    padding: 0;
 }
 
+.nav__options {
+    padding-left: 1rem;
+}
 .nav__options,
 .nav__user {
     flex: 1;
@@ -345,7 +349,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .devs__users .container__img--word {
@@ -359,10 +363,47 @@ img {
     transform: rotate(-45deg);
     background-color: transparent;
 }
+
 .product {
     grid-area: product;
 }
 
+.product__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__header span {
+    font-size: 2.5rem;
+}
+
+.product__date {
+    margin-bottom: 0.5rem;
+}
+
+.product .coder {
+    background-color: var(--color-optional);
+}
+
+.product .meeting {
+    background-color: var(--color-secondary);
+}
+
+.product .discussion__users {
+    margin-top: 1rem;
+}
+
+.product .revenue__icons span:first-child {
+    background-color: transparent;
+    outline: thin solid var(--color-subtitles);
+}
+
+.product .revenue__icons span:last-child {
+    background-color: var(--color-secondary);
+    margin-left: 0.5rem;
+}
 .calendar {
     grid-area: calendar;
+    height: 220px;
 }
