@@ -304,8 +304,20 @@ img {
 
 .earn {
     grid-area: earn;
+    padding: 0.5rem;
 }
 
+.earn__balance,
+.earn__bookings,
+.earn__today {
+    padding: 0.5rem;
+}
+
+.earn__bookings {
+    --radius: 0.5rem;
+    background-color: var(--color-tertiary);
+    border-radius: var(--radius);
+}
 .devs {
     grid-area: devs;
 }
